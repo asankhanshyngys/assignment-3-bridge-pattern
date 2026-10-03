@@ -8,6 +8,7 @@ public class Circle extends Shape {
 
     @Override
     public void draw() {
-        getRenderer().renderCircle(radius);
+        getRenderer().render("Circle with radius " + radius);
     }
 }
+

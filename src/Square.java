@@ -8,6 +8,7 @@ public class Square extends Shape {
 
     @Override
     public void draw() {
-        getRenderer().renderSquare(side);
+        getRenderer().render("Square with side " + side);
     }
 }
+
