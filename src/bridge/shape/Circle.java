@@ -1,14 +1,17 @@
+package bridge.shape;
+
+import bridge.renderer.Renderer;
+
 public class Circle extends Shape {
     private final double radius;
 
     public Circle(double radius, Renderer renderer) {
         super(renderer);
-        this.radius = radius;
+        this.radius = positiveDimension(radius);
     }
 
     @Override
     public void draw() {
-        getRenderer().render("Circle with radius " + radius);
+        renderer().renderCircle(radius);
     }
 }
-

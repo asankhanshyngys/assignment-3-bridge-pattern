@@ -1,12 +1,17 @@
 # Assignment 3 Bridge Pattern
 
-Java 17 console example using Shape and Renderer. Circle and Square keep their dimensions, while VectorRenderer and RasterRenderer handle the drawing output. Main switches the same shape objects from vector to raster rendering at runtime.
+Java 17 console example. Circle and Square delegate drawing to a Renderer. Main shares vector and raster renderers, switches the same shapes at runtime, and switches the circle back to vector rendering. Output describes the drawing operations; no graphics library is needed.
 
 ## Run
 
 ```sh
-javac --release 17 -d out src/*.java
-java -cp out Main
+javac --release 17 -d out -sourcepath src src/bridge/Main.java
+java -cp out bridge.Main
 ```
 
-`src/` contains the seven Java classes and interface. `Report.pdf` contains the introduction, UML diagram, five Clean Code principles with excerpts, conclusion, and repository link.
+## Structure
+
+- `src/bridge/Main.java`: runtime demonstration.
+- `src/bridge/shape/`: Shape, Circle, and Square.
+- `src/bridge/renderer/`: Renderer, VectorRenderer, and RasterRenderer.
+- `Report.pdf`: explanation, UML, five Clean Code principles with excerpts, conclusion, and repository link.
